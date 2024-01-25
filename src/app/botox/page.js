@@ -6,6 +6,7 @@ import Service1 from "../../component/botox/Service1";
 import Who from "../../component/botox/Who";
 import Offer from "../../component/botox/Offer";
 import Footer from "../../component/botox/Footer";
+import '../globals.css'
 
 export default function botox(){
     return(
