@@ -31,3 +31,26 @@ body {
     overflow: hidden;
     color: white;
 }
+
+.icon-contact {
+    border-radius: 50%;
+}
+
+.contact-row {
+    border: 2px solid rgba(87, 87, 87, 0.69);
+    border-radius: 36px;
+    padding: 8px;
+}
+
+.contact-row:hover {
+    transform: scale(1.02);
+}
+
+.text-contact {
+    font-size: 14px;
+}
+
+.TiktokVideo {
+    height: 602px;
+    border-radius: 14px;
+}

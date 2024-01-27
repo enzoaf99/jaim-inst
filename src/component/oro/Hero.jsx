@@ -17,36 +17,74 @@ export default function Hero() {
                     </div>
                     <div className={"col-8"}>
                         <div className={"row align-items-center justify-content-center"}>
-                            <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a href={"https://www.instagram.com/instituto_jaim/"}><Image
+                            <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a
+                                href={"https://www.instagram.com/instituto_jaim/"}><Image
                                 src={"/images/Instagram.png"} alt={"Instagram"} width={40} height={40}/></a></div>
 
-                            <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a href={"https://www.instagram.com/instituto_jaim/"}><Image
+                            <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a
+                                href={"https://www.instagram.com/instituto_jaim/"}><Image
                                 src={"/images/Web.png"} alt={"Web"} width={40} height={40}/></a></div>
 
-                            <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a href={"https://www.instagram.com/instituto_jaim/"}><Image
+                            <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a
+                                href={"https://www.instagram.com/instituto_jaim/"}><Image
                                 src={"/images/Tiktok.png"} alt={"Tiktok"} width={40} height={40}/></a></div>
 
-                            <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a href={"https://www.instagram.com/instituto_jaim/"}><Image
+                            <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a
+                                href={"https://www.instagram.com/instituto_jaim/"}><Image
                                 src={"/images/wpp.png"} alt={"Whatsapp"} width={40} height={40}/></a></div>
                         </div>
                     </div>
-                </div>
-
-
-                <div className={"row justify-content-center align-items-center"}>
-                    <div className="col-sm-10 pt-4">
-                        <video tabIndex="-1" className="video-stream html5-main-video" webkit-playsinline=""
-                               playsInline="" controlsList="nodownload"
-                               style={{width: "560px", height: "315px", left: "0px", top: "0px",}}
-                               src="blob:https://www.youtube.com/Kutz0UJExSU"></video>
+                    <div className={"col-11 pt-5 rounded-3"}>
                         <div className="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/Kutz0UJExSU?rel=0&controls=0"
                                     title="YouTube video"
                                     allowFullScreen></iframe>
                         </div>
                     </div>
+                    <div className={"col-10 col-md-7 col-lg-5 col-xl-5 col-xxl-5 pt-5 text-white"}>
+                        <div className={"row justify-content-center align-items-center contact-row mb-3"}>
+                            <div className={"col-2"}>
+                                <Image className={"icon-contact"} src={"/images/prueba1.webp"} alt={"Reserve"}
+                                       width={50} height={50}/>
+                            </div>
+                            <div className={"col-10"}>
+                                <p className={"m-0 fw-light text-contact"}>RESERVA UNA REUNION TOTALMENTE GRATIS CON
+                                    NOSOTROS</p>
+                            </div>
+                        </div>
+                        <div className={"row justify-content-center align-items-center contact-row mb-3"}>
+                            <div className={"col-2"}>
+                                <Image className={"icon-contact"} src={"/images/prueba1.webp"} alt={"Reserve"}
+                                       width={50} height={50}/>
+                            </div>
+                            <div className={"col-10"}>
+                                <p className={"m-0 fw-light text-contact"}>APRENDE ARMONIZACÓN ORO FACIAL CON 7 TÉCNICAS
+                                    COMBINADAS</p>
+                            </div>
+                        </div>
+                        <div className={"row justify-content-center align-items-center contact-row mb-3"}>
+                            <div className={"col-2"}>
+                                <Image className={"icon-contact"} src={"/images/prueba1.webp"} alt={"Reserve"}
+                                       width={50} height={50}/>
+                            </div>
+                            <div className={"col-10"}>
+                                <p className={"m-0 fw-light text-contact"}>APRENDE DE LA #1 EN ARMONIZACIÓN</p>
+                            </div>
+                        </div>
+                        <div className={"row justify-content-center align-items-center contact-row mb-3"}>
+                            <div className={"col-2"}>
+                                <Image className={"icon-contact"} src={"/images/prueba1.webp"} alt={"Reserve"}
+                                       width={50} height={50}/>
+                            </div>
+                            <div className={"col-10"}>
+                                <p className={"m-0 fw-light text-contact"}>QUIERO INFORMACIÓN SOBRE CURSOS</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+                <div className="">
+                    <iframe src="https://tiktok.com/embed/7174782741010009387" scrolling="no"></iframe>
+                </div>
             </div>
         </>
     )
