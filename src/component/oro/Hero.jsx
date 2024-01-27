@@ -82,8 +82,8 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
-                <div className="">
-                    <iframe src="https://tiktok.com/embed/7174782741010009387" scrolling="no"></iframe>
+                <div className="pb-5">
+                    <iframe src="https://tiktok.com/embed/7174782741010009387" scrolling="no" style={{borderRadius: "15px", height: "580px"}} ></iframe>
                 </div>
             </div>
         </>
