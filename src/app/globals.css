@@ -67,7 +67,6 @@ body {
             opacity: 0;
         }
     }
-}
 
 @keyframes fadeOut {
     to {
