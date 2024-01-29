@@ -48,6 +48,8 @@ body {
 
 .text-contact {
     font-size: 14px;
+    text-decoration: none;
+    color: white;
 }
 
 .TiktokVideo {

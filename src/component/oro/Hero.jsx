@@ -40,7 +40,7 @@ export default function Hero() {
                     <div className={"col-8"}>
                         <p className={"text-white fw-bold pt-4"}>@instituto_jaim</p>
                         <p className={"text-white fw-bold"}> 📍 ACADEMIA INTERNACIONAL CON PRESENCIA EN +20 PAÍSES</p>
-                        <p className={"text-white fw-bold"}>👨‍⚕️👩‍⚕️ <CounterAnimation endValue={32000}/> ALUMNOS NOS
+                        <p className={"text-white fw-bold"}>👩🏻‍⚕️👨🏻‍⚕️️ <CounterAnimation endValue={32000}/> ALUMNOS NOS
                             ELIGEN</p>
                     </div>
                     <div className={"col-8"}>
@@ -76,8 +76,8 @@ export default function Hero() {
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
-                                <p className={"m-0 fw-light text-contact"}>RESERVA UNA REUNION TOTALMENTE GRATIS CON
-                                    NOSOTROS</p>
+                                <a className={"m-0 fw-light text-contact text-uppercase"}>Reserva una reunión totalmente con nosotros
+                                </a>
                             </div>
                         </div>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
@@ -86,8 +86,8 @@ export default function Hero() {
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
-                                <p className={"m-0 fw-light text-contact"}>APRENDE ARMONIZACÓN ORO FACIAL CON 7 TÉCNICAS
-                                    COMBINADAS</p>
+                                <a href={"https://drive.google.com/drive/folders/1GL6tKEIRvx9f558g0s-rbVhI3ebEfwCbqxpkAvWbGbYH_jWSOCjsBjmDh03MPFtCZqGIQXZ0"} className={"m-0 fw-light text-contact text-uppercase"}>Descarga gratis nuestro ebook sobre peeling
+                                </a>
                             </div>
                         </div>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
@@ -96,7 +96,8 @@ export default function Hero() {
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
-                                <p className={"m-0 fw-light text-contact"}>APRENDE DE LA #1 EN ARMONIZACIÓN</p>
+                                <a className={"m-0 fw-light text-contact text-uppercase"}>Adquirí/voy adquirír una tecnología y no sé cómo usarla
+                                </a>
                             </div>
                         </div>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
@@ -105,7 +106,8 @@ export default function Hero() {
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
-                                <p className={"m-0 fw-light text-contact"}>QUIERO INFORMACIÓN SOBRE CURSOS</p>
+                                <a className={"m-0 fw-light text-contact text-uppercase"}>Recibe actualización de cursos nuevos vía whatsapp (un curso nuevo cada mes)
+                                </a>
                             </div>
                         </div>
                     </div>
