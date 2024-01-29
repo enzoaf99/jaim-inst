@@ -4,7 +4,7 @@ body{
 .preloader {
     height: 100vh;
     width: 100%;
-    background: white;
+    background: black;
     color: white;
     position: fixed;
     bottom: 0;
