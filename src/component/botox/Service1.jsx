@@ -5,7 +5,7 @@ function service1() {
         <div className={"container-fluid"}>
             <div className={"row justify-content-center"}>
                 <div className={"col-12 col-sm-6 pt-4 text-jaim"}>
-                    <h2 className={"text-center fw-bold text-black"}>QUE APRENDERAS EN ESTE CURSO DE BOTÓX TERCIO MEDIO</h2>
+                    <h2 className={"text-center fw-bold text-white"}>QUE APRENDERAS EN ESTE CURSO DE BOTÓX TERCIO MEDIO</h2>
                 </div>
             </div>
             <div className={"row justify-content-center pt-4"}>

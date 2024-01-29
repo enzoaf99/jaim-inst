@@ -3,7 +3,7 @@ function Footer(){
     const currentYear = new Date().getFullYear();
     return (
         <>
-            <footer className={"container-fluid bg-black pt-3"}>
+            <footer className={"container-fluid bg-black pt-1"}>
                 <div className={"d-flex justify-content-around text-center"}>
                     <div>
                         <a href={"https://institutojaim.com/"}><Image src={"/images/LogoInstJaim.png"} alt={"Instituto Jaim"} width="60" height="30"></Image></a>

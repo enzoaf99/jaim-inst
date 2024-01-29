@@ -1,5 +1,33 @@
 import Image from "next/image";
+import { useEffect, useState } from 'react';
 
+const CounterAnimation = ({ endValue }) => {
+    const [count, setCount] = useState(0);
+    const duration = 1.5; // Duración total de la animación en milisegundos
+    const steps = Math.ceil(duration / (endValue / 10)); // Calcular el número de intervalos necesarios
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCount((prevCount) => {
+                // Aumentar el contador por 10 unidades en cada intervalo
+                const newCount = prevCount + 100;
+
+                // Detener la animación cuando alcance o supere el valor final
+                if (newCount >= endValue) {
+                    clearInterval(intervalId);
+                    return endValue;
+                }
+
+                return newCount;
+            });
+        }, duration / steps); // Ajustar el intervalo según el número de pasos
+
+        // Limpiar el intervalo cuando el componente se desmonta
+        return () => clearInterval(intervalId);
+    }, [endValue, duration, steps]);
+
+    return count.toLocaleString()
+};
 export default function Hero() {
     return (
         <>
@@ -11,9 +39,9 @@ export default function Hero() {
                     </div>
                     <div className={"col-8"}>
                         <p className={"text-white fw-bold pt-4"}>@instituto_jaim</p>
-                        <p className={"text-white fw-bold"}> 📍 NYC, LA, HTX, CHI, S. Florida</p>
-                        <p className={"text-white fw-bold"}>Best Scalp Micropigmentation company w/ over 10,000
-                            clients</p>
+                        <p className={"text-white fw-bold"}> 📍 ACADEMIA INTERNACIONAL CON PRESENCIA EN +20 PAÍSES</p>
+                        <p className={"text-white fw-bold"}>👨‍⚕️👩‍⚕️ <CounterAnimation endValue={32000}/> ALUMNOS NOS
+                            ELIGEN</p>
                     </div>
                     <div className={"col-8"}>
                         <div className={"row align-items-center justify-content-center"}>
@@ -27,7 +55,7 @@ export default function Hero() {
 
                             <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a
                                 href={"https://www.instagram.com/instituto_jaim/"}><Image
-                                src={"/images/Tiktok.png"} alt={"Tiktok"} width={40} height={40}/></a></div>
+                                src={"/images/face.png"} alt={"Facebook"} width={40} height={40}/></a></div>
 
                             <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a
                                 href={"https://www.instagram.com/instituto_jaim/"}><Image

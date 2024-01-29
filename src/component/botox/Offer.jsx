@@ -39,16 +39,17 @@ function Offer() {
     })
     return (
         <>
-            <div className={"container-fluid bg-black text-center text-white pe-0 ps-0 pt-4 pb-1 mt-5 mb-1"}>
+            <div className={"container-fluid bg-black text-center text-white pe-0 ps-0 pt-2 pb-1 mt-1 mb-1"}>
                 <p className={"fw-bold fs-1"}>SUPER OFERTA</p>
-                <p className={"fw-light fs-6"}>Oferta por tiempo limitado!!</p>
+                <p className={"fw-light fs-6"}>Válido por tiempo limitado!</p>
             </div>
 
-            <div className={"row justify-content-center pb-4 m-0"}>
+            <div className={"row justify-content-center pb-1 m-0"}>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 p-0"}>
-                    <Image src="/images/service3.jpg" alt="Servicio" width={1280} height={720} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <Image src="/images/service3.jpg" alt="Servicio" width={1280} height={720}
+                           style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
                 </div>
-                <div className={"col-md-7 col-xl-4 col-xxl-3 bg-jaim-primary p-4 text-center text-white"}>
+                <div id={"offer"} className={"col-md-7 col-xl-4 col-xxl-3 bg-jaim-primary p-4 text-center text-white"}>
                     <h3 className={"text-white fw-bold"}>CURSO BOTOX TERCIÓ SUPERIOR</h3>
                     <p className={"text-white fs-5"}>Comprando hoy también recibís GRATIS</p>
                     <h3 className={"text-white fw-bold"}>CURSO BOTOX TERCIÓ MEDIO</h3>
@@ -78,7 +79,10 @@ function Offer() {
                             <p className="text-white fw-bolder">Seg</p>
                         </div>
                     </div>
-                    <button className={"btn-jaim pulse fs-6 fw-medium m-2 p-3"}>¡Quiero adquirir los cursos ahora mismo!</button>
+                    <button className={"btn-jaim pulse fs-6 fw-medium m-2 p-3"} onClick={() => {
+                        window.location.href = 'https://wa.link/c69io0'; // Reemplaza con la URL externa a la que deseas redirigir
+                    }}>¡Quiero adquirir los cursos ahora mismo!
+                    </button>
                 </div>
             </div>
         </>

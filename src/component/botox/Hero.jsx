@@ -51,14 +51,23 @@ function Hero() {
                     </div>
                     <div className={"col-12 pt-4"}>
                         <div className={"d-flex justify-content-center"}>
-                            <button className={"btn-jaim pulse fs-6 fw-medium m-2 p-3"}>QUIERO ADQUIRIR ESTE CURSO
-                                AHORA!
+                            <button
+                                className={"btn-jaim pulse fs-6 fw-medium m-2 p-3"}
+                                onClick={() => {
+                                    const offerSection = document.getElementById('offer');
+
+                                    if (offerSection) {
+                                        offerSection.scrollIntoView({behavior: 'smooth'});
+                                    }
+                                }}
+                            >
+                                QUIERO ADQUIRIR ESTE CURSO AHORA!
                             </button>
                         </div>
                     </div>
                     <div className={"col-12"}>
                         <div className={"d-flex justify-content-center"}>
-                           <Image src={"/images/PaymentMethods.png"} alt={"Metodos de pago"} width="270" height="152"></Image>
+                            <Image src={"/images/PaymentMethods.png"} alt={"Metodos de pago"} width="270" height="152"></Image>
                         </div>
                     </div>
                 </div>
