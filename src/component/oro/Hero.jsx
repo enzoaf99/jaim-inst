@@ -72,17 +72,17 @@ export default function Hero() {
                     <div className={"col-10 col-md-7 col-lg-5 col-xl-5 col-xxl-5 pt-5 text-white"}>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
                             <div className={"col-2"}>
-                                <Image className={"icon-contact"} src={"/images/prueba1.webp"} alt={"Reserve"}
+                                <Image className={"icon-contact"} src={"/images/contact.jpg"} alt={"Reserva"}
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
-                                <a className={"m-0 fw-light text-contact text-uppercase"}>Reserva una reunión totalmente con nosotros
+                                <a href={"https://calendly.com/institutojaim/reunion-jaim"} className={"m-0 fw-light text-contact text-uppercase"}>Reserva una reunión totalmente con nosotros
                                 </a>
                             </div>
                         </div>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
                             <div className={"col-2"}>
-                                <Image className={"icon-contact"} src={"/images/prueba1.webp"} alt={"Reserve"}
+                                <Image className={"icon-contact"} src={"/images/ebook.jpg"} alt={"Ebook"}
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
@@ -92,21 +92,21 @@ export default function Hero() {
                         </div>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
                             <div className={"col-2"}>
-                                <Image className={"icon-contact"} src={"/images/prueba1.webp"} alt={"Reserve"}
+                                <Image className={"icon-contact"} src={"/images/tec.jpg"} alt={"Tecnología"}
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
-                                <a className={"m-0 fw-light text-contact text-uppercase"}>Adquirí/voy adquirír una tecnología y no sé cómo usarla
+                                <a href={"https://calendly.com/institutojaim/15m"} className={"m-0 fw-light text-contact text-uppercase"}>Adquirí/voy adquirír una tecnología y no sé cómo usarla
                                 </a>
                             </div>
                         </div>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
                             <div className={"col-2"}>
-                                <Image className={"icon-contact"} src={"/images/prueba1.webp"} alt={"Reserve"}
+                                <Image className={"icon-contact"} src={"/images/act.jpg"} alt={"Actualizaciones"}
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
-                                <a className={"m-0 fw-light text-contact text-uppercase"}>Recibe actualización de cursos nuevos vía whatsapp (un curso nuevo cada mes)
+                                <a href={"https://wa.me/5491160573504"} className={"m-0 fw-light text-contact text-uppercase"}>Recibe actualización de cursos nuevos vía whatsapp (un curso nuevo cada mes)
                                 </a>
                             </div>
                         </div>
