@@ -9,10 +9,10 @@ function Footer(){
                         <a href={"https://institutojaim.com/"}><Image src={"/images/LogoInstJaim.png"} alt={"Instituto Jaim"} width="60" height="30"></Image></a>
                     </div>
                     <div>
-                        <p className={"text-secondary-emphasis"}>Derechos reservados©{currentYear}</p>
+                        <p className={"text-light-emphasis"}>Derechos reservados©{currentYear}</p>
                     </div>
                     <div>
-                        <a className={"text-secondary-emphasis"} href={"https://thing.com.ar/"}>ThingDev</a>
+                        <a className={"text-light-emphasis"} href={"https://thing.com.ar/"}>ThingDev</a>
                     </div>
                 </div>
             </footer>
