@@ -19,10 +19,25 @@ export default function Shop() {
                         <h5 className="card-title text-jaim">Checkout</h5>
                         <div className={"card p-2 mt-3"}>
                             <p className={"fw-bolder"}>Detalle de compra</p>
-                            <p>Curso - Botox tercio superior + botox tercio medio</p>
-                            <p>Subtotal - U$D 80</p>
-                            <p>Descuento - 64%</p>
-                            <p className={"text-jaim fw-bolder fs-2"}>Precio final: U$D 45</p>
+                            <table className="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Precio</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Botox tercio superior + botox tercio medio</td>
+                                    <td>$80</td>
+                                </tr>
+                                <tr>
+                                    <td>Descuento promo</td>
+                                    <td className={"text-success"}>-64%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p className={"text-jaim fw-bolder"}>Precio final: U$D 45</p>
                         </div>
                         <h6 className="card-subtitle mb-2 text-body-secondary pt-3">
                             Haga click en su país para comenzar

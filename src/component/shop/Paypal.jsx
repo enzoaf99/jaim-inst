@@ -21,6 +21,11 @@ export default function Paypal() {
                         return order.id
                     }}
                     onApprove={(data, actions) =>{
+                        console.log("APROVADO")
+                        console.log(data)
+                    }}
+                    onCancel={(data)=>{
+                        console.log("COMPRA CANCELADA")
                         console.log(data)
                     }}
                 />
