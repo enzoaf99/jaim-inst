@@ -21,6 +21,7 @@ export default function Paypal() {
                         return order.id
                     }}
                     onApprove={(data, actions) =>{
+                        actions.order.capture()
                         console.log("APROVADO")
                         console.log(data)
                     }}
