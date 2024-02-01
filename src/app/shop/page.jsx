@@ -96,9 +96,18 @@ export default function Shop() {
                             </div>
                         </div>
 
+                        <div className={"pt-4"}>
+                            <p>Curso botox tercio superior + botox tercio medio</p>
+                        </div>
+
                         <div className={"container pt-4"}>
-                            <p style={{display: selectedCountry ? 'block' : 'none'}}>Paypal</p>
-                            <p style={{display: selectedCountry === 'arg' ? 'block' : 'none'}}>Mercado Pago</p>
+                            <div style={{ display: selectedCountry === 'arg' ? 'block' : 'none' }}>
+                                <div>Paypal</div>
+                                <div>Mercado Pago</div>
+                            </div>
+                            <div style={{ display: selectedCountry === 'arg' ? 'none' : 'block' }}>
+                                <div>Paypal</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,11 +119,7 @@ export default function Shop() {
                 }
 
                 a.selected {
-                    filter: grayscale(0%); /* Elimina la escala de grises para la bandera seleccionada */
-                }
-
-                p:last-child {
-                    display: ${selectedCountry === 'arg' ? 'block' : 'none'};
+                    filter: grayscale(0%);
                 }
             `}</style>
         </>

@@ -52,7 +52,7 @@ function Offer() {
                 <div id={"offer"} className={"col-md-7 col-xl-4 col-xxl-3 bg-jaim-primary p-4 text-center text-white"}>
                     <h3 className={"text-white fw-bold"}>CURSO BOTOX TERCIO SUPERIOR</h3>
                     <p className={"text-white fs-5"}>Comprando hoy también recibís GRATIS</p>
-                    <h3 className={"text-white fw-bold"}>CURSO BOTOX TERCIÓ MEDIO</h3>
+                    <h3 className={"text-white fw-bold"}>CURSO BOTOX TERCIO MEDIO</h3>
                     <p className={"text-white fw-light text-uppercase bg-danger"}>
                         ACCESO INMEDIATO CON 64% de descuento
                     </p>
