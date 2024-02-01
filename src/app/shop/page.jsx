@@ -2,6 +2,7 @@
 import {useState} from 'react';
 import Image from 'next/image';
 import "../shop/style.css"
+import Paypal from "@/src/component/shop/Paypal";
 
 export default function Shop() {
     const [selectedCountry, setSelectedCountry] = useState(null);
@@ -12,15 +13,22 @@ export default function Shop() {
 
     return (
         <>
-            <div className={'container pt-4'}>
+            <div className={'container col-12 col-md-6 col-lg-4 pt-4'}>
                 <div className="card">
                     <div className="card-body">
-                        <h5 className="card-title">Checkout</h5>
-                        <h6 className="card-subtitle mb-2 text-body-secondary">
+                        <h5 className="card-title text-jaim">Checkout</h5>
+                        <div className={"card p-2 mt-3"}>
+                            <p className={"fw-bolder"}>Detalle de compra</p>
+                            <p>Curso - Botox tercio superior + botox tercio medio</p>
+                            <p>Subtotal - U$D 80</p>
+                            <p>Descuento - 64%</p>
+                            <p className={"text-jaim fw-bolder fs-2"}>Precio final: U$D 45</p>
+                        </div>
+                        <h6 className="card-subtitle mb-2 text-body-secondary pt-3">
                             Haga click en su país para comenzar
                         </h6>
                         <div className={'row justify-content-center'}>
-                            <div className={"col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 pt-4"}>
+                            <div className={"col-12 pt-3"}>
                                 <div className={"d-flex justify-content-around"}>
                                     <a
                                         href="#"
@@ -57,7 +65,7 @@ export default function Shop() {
                                     </a>
                                 </div>
                             </div>
-                            <div className={"col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 pt-4"}>
+                            <div className={"col-12 pt-3"}>
                                 <div className={"d-flex justify-content-around"}>
                                     <a
                                         href="#"
@@ -96,17 +104,12 @@ export default function Shop() {
                             </div>
                         </div>
 
-                        <div className={"pt-4"}>
-                            <p>Curso botox tercio superior + botox tercio medio</p>
-                        </div>
-
-                        <div className={"container pt-4"}>
-                            <div style={{ display: selectedCountry === 'arg' ? 'block' : 'none' }}>
-                                <div>Paypal</div>
-                                <div>Mercado Pago</div>
-                            </div>
-                            <div style={{ display: selectedCountry === 'arg' ? 'none' : 'block' }}>
-                                <div>Paypal</div>
+                        <div className={"d-flex justify-content-around text-center p-4"}>
+                            <div style={{display: selectedCountry ? 'block' : 'none'}}>
+                                <p className={"fw-bolder pb-1"}>
+                                    Metodo de pago
+                                </p>
+                                <Paypal/>
                             </div>
                         </div>
                     </div>
