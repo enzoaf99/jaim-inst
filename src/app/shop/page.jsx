@@ -140,8 +140,8 @@ export default function Shop() {
                 </div>
 
                 {showErrorMessage && (
-                    <div className="alert alert-danger mt-3" role="alert">
-                        Complete el formulario correctamente antes de continuar.
+                    <div className={"alert alert-info mt-3"} role="alert">
+                        Recuerde completar el formulario correctamente antes de continuar.
                     </div>
                 )}
 
