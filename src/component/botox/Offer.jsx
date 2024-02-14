@@ -39,7 +39,8 @@ function Offer() {
     })
     return (
         <>
-            <div className={"container-fluid bg-black text-center text-white pe-0 ps-0 pt-2 pb-1 mt-1 mb-1"}>
+            <div id={"offer"}
+                 className={"container-fluid bg-black text-center text-white pe-0 ps-0 pt-2 pb-1 mt-1 mb-1"}>
                 <p className={"fw-bold fs-1"}>SUPER OFERTA</p>
                 <p className={"fw-light fs-6"}>Válido por tiempo limitado!</p>
             </div>
@@ -79,9 +80,13 @@ function Offer() {
                             <p className="text-white fw-bolder">Seg</p>
                         </div>
                     </div>
-                    <button className={"btn-jaim pulse fs-6 fw-medium m-2 p-3"} onClick={() => {
-                        window.location.href = 'https://wa.link/c69io0'; // Reemplaza con la URL externa a la que deseas redirigir
-                    }}>¡Quiero adquirir los cursos ahora mismo!
+                    <button
+                        className={"btn-jaim pulse fs-6 fw-medium m-2 p-3"}
+                        onClick={() => {
+                            window.location.href = '/shop'; // Cambia a la ruta interna "/shop"
+                        }}
+                    >
+                        ¡Quiero adquirir los cursos ahora mismo!
                     </button>
                 </div>
             </div>

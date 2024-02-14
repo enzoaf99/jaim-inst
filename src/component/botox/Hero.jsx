@@ -54,7 +54,11 @@ function Hero() {
                             <button
                                 className={"btn-jaim pulse fs-6 fw-medium m-2 p-3"}
                                 onClick={() => {
-                                    window.location.href = 'https://wa.link/c69io0';}}
+                                    const buySection = document.getElementById('offer');
+                                    if (buySection) {
+                                        buySection.scrollIntoView({behavior: 'smooth'});
+                                    }
+                                }}
                             >
                                 QUIERO ADQUIRIR ESTE CURSO AHORA!
                             </button>
