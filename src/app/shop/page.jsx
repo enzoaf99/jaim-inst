@@ -1,12 +1,13 @@
 "use client"
-import {useEffect, useState} from 'react';
+import "../shop/style.css";
+import { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import {PayPalScriptProvider, PayPalButtons} from '@paypal/react-paypal-js';
+import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 
 const paypalclientid = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
 const emailServiceId = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID;
 const emailTemplateId = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
-const emialPublicKey = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY;
+const emailPublicKey = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY;
 
 export default function Shop() {
     const [billingInfo, setBillingInfo] = useState({
@@ -16,15 +17,34 @@ export default function Shop() {
     });
 
     const [paymentApproved, setPaymentApproved] = useState(false);
+    const [showConfirmation, setShowConfirmation] = useState(false);
+    const [fieldsCompleted, setFieldsCompleted] = useState(false);
+    const [showErrorMessage, setShowErrorMessage] = useState(false);
+    const [emailValid, setEmailValid] = useState(true); // Estado para la validación del correo electrónico
 
     const handleInputChange = (e) => {
-        const {name, value} = e.target;
+        const { name, value } = e.target;
         setBillingInfo((prevInfo) => ({
             ...prevInfo,
             [name]: value,
         }));
-        console.log(billingInfo)
+        // Validar correo electrónico
+        if (name === 'email') {
+            setEmailValid(validateEmail(value));
+        }
     };
+
+    const validateEmail = (email) => {
+        // Expresión regular para validar un correo electrónico
+        const re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    };
+
+    useEffect(() => {
+        // Verifica si los campos obligatorios están completos
+        const isFieldsCompleted = Object.values(billingInfo).every(value => value !== "");
+        setFieldsCompleted(isFieldsCompleted);
+    }, [billingInfo]);
 
     useEffect(() => {
         if (paymentApproved) {
@@ -40,18 +60,31 @@ export default function Shop() {
                     emailServiceId,
                     emailTemplateId,
                     templateParams,
-                    emialPublicKey
+                    emailPublicKey
                 )
                 .then((response) => {
-                    console.log('Correo electrónico enviado con éxito:', response);
-                    // Redirige a la URL de WhatsApp después de completar todo el proceso
-                    window.location.href = 'https://api.whatsapp.com/send?phone=5491160573504&text=Hola,%20acabo%20de%20adquirir%20el%20curso%20de%20promo%20de%20BOTOX!';
+                    setShowConfirmation(true); // Muestra la tarjeta de confirmación
+                    setTimeout(() => {
+                        const message = `¡Hola! Soy ${billingInfo.fullName}, acabo de adquirir el curso de BOTOX.`;
+                        const encodedMessage = encodeURIComponent(message);
+                        const whatsappLink = `https://api.whatsapp.com/send?phone=5491160573504&text=${encodedMessage}`;
+                        window.open(whatsappLink, '_blank'); // Abre en una nueva pestaña
+                    }, 5000); // Redirecciona después de 5 segundos
                 })
                 .catch((error) => {
                     console.error('Error al enviar el correo electrónico:', error);
                 });
         }
     }, [paymentApproved, billingInfo]);
+
+    const handlePayPalClick = () => {
+        if (!fieldsCompleted || !emailValid) {
+            setShowErrorMessage(true); // Muestra el mensaje de error si los campos no están completos o el correo electrónico no es válido
+        } else {
+            setShowErrorMessage(false);
+            // Continúa con el proceso de pago de PayPal
+        }
+    };
 
     return (
         <>
@@ -79,12 +112,17 @@ export default function Shop() {
                     </label>
                     <input
                         type="email"
-                        className="form-control"
+                        className={`form-control ${!emailValid ? 'is-invalid' : ''}`} // Aplica clase de Bootstrap para indicar un campo inválido si el correo no es válido
                         id="email"
                         name="email"
                         value={billingInfo.email}
                         onChange={handleInputChange}
                     />
+                    {!emailValid && (
+                        <div className="invalid-feedback">
+                            Por favor, introduce un correo electrónico válido.
+                        </div>
+                    )}
                 </div>
 
                 <div className={"mt-3"}>
@@ -92,7 +130,7 @@ export default function Shop() {
                         Número de Teléfono
                     </label>
                     <input
-                        type="tel"
+                        type="number"
                         className="form-control"
                         id="phoneNumber"
                         name="phoneNumber"
@@ -100,6 +138,12 @@ export default function Shop() {
                         onChange={handleInputChange}
                     />
                 </div>
+
+                {showErrorMessage && (
+                    <div className="alert alert-danger mt-3" role="alert">
+                        Complete el formulario correctamente antes de continuar.
+                    </div>
+                )}
 
                 <div className={"card mt-3"}>
                     <div className={"card-body"}>
@@ -130,9 +174,9 @@ export default function Shop() {
                         <p className={"fw-bolder pb-1"}>
                             Método de Pago
                         </p>
-                        <PayPalScriptProvider options={{clientId: paypalclientid}}>
+                        <PayPalScriptProvider options={{ clientId: paypalclientid }}>
                             <PayPalButtons
-                                style={{color: "blue"}}
+                                style={{ color: "blue" }}
                                 createOrder={async () => {
                                     const res = await fetch("/api/checkout", {
                                         method: "POST",
@@ -145,17 +189,36 @@ export default function Shop() {
                                     setPaymentApproved(true); // Marca el pago como aprobado
                                     actions.order.capture();
                                     console.log('APROVADO');
-                                    console.log(data);
+                                    const orderId = data.orderID;
+                                    console.log(data)
+                                    console.log(orderId);
                                 }}
                                 onCancel={(data) => {
                                     console.log("COMPRA CANCELADA");
                                     console.log(data);
                                 }}
+                                onClick={handlePayPalClick} // Maneja el evento de clic en los botones de PayPal
+                                disabled={!fieldsCompleted || !emailValid} // Deshabilita los botones si los campos no están completos o el correo no es válido
                             />
                         </PayPalScriptProvider>
                     </div>
                 </div>
             </div>
+            {showConfirmation && (
+                <div className="overlay">
+                    <div className="d-flex justify-content-center align-items-center vh-100">
+                        <div className="card text-center m-4">
+                            <div className="card-body">
+                                <h5 className="card-title">Felicitaciones por tu compra {billingInfo.fullName}!</h5>
+                                <div className={"card-body"}>
+                                    <p>Te redirigimos a nuestro WhatsApp para finalizar con la compra.</p>
+                                    <p className={"fw-light"}>(Tambien te enviaremos un correo a <span className={"text-muted"}>{billingInfo.email}</span>)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </>
     );
 }
