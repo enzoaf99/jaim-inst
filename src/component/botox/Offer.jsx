@@ -55,7 +55,7 @@ function Offer() {
                     <p className={"text-white fs-5"}>Comprando hoy también recibís GRATIS</p>
                     <h3 className={"text-white fw-bold"}>CURSO BOTOX TERCIO MEDIO</h3>
                     <p className={"text-white fw-light text-uppercase bg-danger"}>
-                        ACCESO INMEDIATO CON 64% de descuento
+                        ACCESO INMEDIATO CON 45% de descuento
                     </p>
 
                     <p className={"fw-light fs-6"}>ÚLTIMO DÍA CON DESCUENTO DE 80 dólares</p>

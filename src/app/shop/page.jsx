@@ -86,10 +86,63 @@ export default function Shop() {
         }
     };
 
+    useEffect(() => {
+        let totalTime = 9000;
+
+        function updateClock() {
+            let hours = Math.floor(totalTime / 3600); // Obtener las horas
+            let minutes = Math.floor((totalTime % 3600) / 60); // Obtener los minutos
+            let seconds = totalTime % 60; // Obtener los segundos
+
+            // Actualizar todos los elementos con la clase 'countdown-minutes'
+            let minuteElements = document.getElementsByClassName('countdown-minutes');
+            for (let i = 0; i < minuteElements.length; i++) {
+                minuteElements[i].innerHTML = minutes.toString().padStart(2, '0');
+            }
+
+            // Actualizar todos los elementos con la clase 'countdown-seconds'
+            let secondElements = document.getElementsByClassName('countdown-seconds');
+            for (let j = 0; j < secondElements.length; j++) {
+                secondElements[j].innerHTML = seconds.toString().padStart(2, '0');
+            }
+
+            // Actualizar todos los elementos con la clase 'countdown-hours'
+            let hoursElements = document.getElementsByClassName('countdown-hours');
+            for (let j = 0; j < hoursElements.length; j++) {
+                hoursElements[j].innerHTML = hours.toString().padStart(2, '0');
+            }
+
+            if (totalTime === 0) {
+            } else {
+                totalTime -= 1;
+                setTimeout(updateClock, 1000);
+            }
+        }
+
+        updateClock();
+    })
+
     return (
         <>
             <div className={'container pt-3 ps-4 pe-4'}>
-                <h4 className={"fw-bold text-uppercase fs-6"}>Detalles de facturación</h4>
+
+                <h4 className={'text-center fw-bold'}>Oferta de tiempo limitado!</h4>
+                <div className="d-flex justify-content-center pb-4 mb-4">
+                    <div className="m-2 ps-3 pe-3 bg-jaim-primary text-center rounded-1">
+                        <span className="fs-1 text-white countdown-hours"></span>
+                        <p className="text-white fw-bolder">Hrs</p>
+                    </div>
+                    <div className="m-2 ps-3 pe-3 bg-jaim-primary text-center rounded-1">
+                        <span className="fs-1 text-white countdown-minutes"></span>
+                        <p className="text-white fw-bolder">Min</p>
+                    </div>
+                    <div className="m-2 ps-3 pe-3 bg-jaim-primary text-center rounded-1">
+                        <span className="fs-1 text-white countdown-seconds"></span>
+                        <p className="text-white fw-bolder">Seg</p>
+                    </div>
+                </div>
+
+                <h4 className={"fw-bold text-uppercase fs-6 text-center"}>Detalles de facturación</h4>
 
                 {/* Campos adicionales */}
                 <div className={"mt-3"}>
@@ -174,9 +227,9 @@ export default function Shop() {
                         <p className={"fw-bolder pb-1"}>
                             Método de Pago
                         </p>
-                        <PayPalScriptProvider options={{ clientId: paypalclientid }}>
+                        <PayPalScriptProvider options={{clientId: paypalclientid}}>
                             <PayPalButtons
-                                style={{ color: "blue" }}
+                                style={{color: "blue"}}
                                 createOrder={async () => {
                                     const res = await fetch("/api/checkout", {
                                         method: "POST",
@@ -212,7 +265,8 @@ export default function Shop() {
                                 <h5 className="card-title">Felicitaciones por tu compra {billingInfo.fullName}!</h5>
                                 <div className={"card-body"}>
                                     <p>Te redirigimos a nuestro WhatsApp para finalizar con la compra.</p>
-                                    <p className={"fw-light"}>(Tambien te enviaremos un correo a <span className={"text-muted"}>{billingInfo.email}</span>)</p>
+                                    <p className={"fw-light"}>(Tambien te enviaremos un correo a <span
+                                        className={"text-muted"}>{billingInfo.email}</span>)</p>
                                 </div>
                             </div>
                         </div>
