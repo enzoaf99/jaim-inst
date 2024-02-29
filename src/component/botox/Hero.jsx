@@ -1,6 +1,7 @@
 "use client"
 import {useState, useEffect} from 'react';
 import Image from 'next/image'
+import paymentMethod from '/public/images/PaymentMethods.png'
 
 function Hero() {
     const [city, setCity] = useState('');
@@ -66,7 +67,7 @@ function Hero() {
                     </div>
                     <div className={"col-12"}>
                         <div className={"d-flex justify-content-center"}>
-                            <Image src={"/images/PaymentMethods.png"} alt={"Metodos de pago"} width="270" height="152"></Image>
+                            <Image src={paymentMethod} alt={"Metodos de pago"} width="270" height="152"></Image>
                         </div>
                     </div>
                 </div>
