@@ -230,8 +230,9 @@ export default function Shop() {
                         <PayPalScriptProvider options={{clientId: paypalclientid}}>
                             <PayPalButtons
                                 style={{color: "blue"}}
+                                //https://jaimback-production.up.railway.app/api/checkout
                                 createOrder={async () => {
-                                    const res = await fetch("https://jaimback-production.up.railway.app/api/checkout", {
+                                    const res = await fetch("http://localhost:3001/api/checkout", {
                                         method: "POST",
                                     });
                                     const order = await res.json();
@@ -267,6 +268,7 @@ export default function Shop() {
                                     <p>Te redirigimos a nuestro WhatsApp para finalizar con la compra.</p>
                                     <p className={"fw-light"}>(Tambien te enviaremos un correo a <span
                                         className={"text-muted"}>{billingInfo.email}</span>)</p>
+                                    <a className={'fw-bold'} href={"https://api.whatsapp.com/send?phone=5491160573504"}>Click aca para contactarnos manualmente</a>
                                 </div>
                             </div>
                         </div>
