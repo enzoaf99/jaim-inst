@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 function service1() {
     return (
         <div className={"container-fluid"}>
@@ -10,7 +8,7 @@ function service1() {
             </div>
             <div className={"row justify-content-center pt-4"}>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 p-0"}>
-                    <Image src="/images/service1.png" alt="service1img" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
+                    <img src="/images/service1.png" alt="service1img" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
                 </div>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 bg-jaim-primary p-4"}>
                     <h3 className={"text-white"}>BOTÓX TERCIO MEDIO</h3>
@@ -25,7 +23,7 @@ function service1() {
 
             <div className={"row justify-content-center pt-4"}>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 p-0"}>
-                    <Image src="/images/entrecejo.jpg" alt="entrecejo" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
+                    <img src="/images/entrecejo.jpg" alt="entrecejo" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
                 </div>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 bg-jaim-primary p-4"}>
                     <h3 className={"text-white"}>Líneas del entrecejo</h3>
@@ -43,7 +41,7 @@ function service1() {
 
             <div className={"row justify-content-center pt-4"}>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 p-0"}>
-                    <Image src="/images/patasdegallo.jpg" alt="Patas de gallo" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
+                    <img src="/images/patasdegallo.jpg" alt="Patas de gallo" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
                 </div>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 bg-jaim-primary p-4"}>
                     <h3 className={"text-white"}>Patas de gallo</h3>
@@ -58,7 +56,7 @@ function service1() {
 
             <div className={"row justify-content-center pt-4"}>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 p-0"}>
-                    <Image src="/images/bunnylines.jpg" alt="Bunny Lines" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
+                    <img src="/images/bunnylines.jpg" alt="Bunny Lines" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
                 </div>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 bg-jaim-primary p-4"}>
                     <h3 className={"text-white"}>Bunny Lines</h3>
@@ -73,7 +71,7 @@ function service1() {
 
             <div className={"row justify-content-center pt-4"}>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 p-0"}>
-                    <Image src="/images/lineasfrontales.jpg" alt="Líneas frontales" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
+                    <img src="/images/lineasfrontales.jpg" alt="Líneas frontales" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
                 </div>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 bg-jaim-primary p-4"}>
                     <h3 className={"text-white"}>Líneas frontales</h3>
@@ -89,7 +87,7 @@ function service1() {
 
             <div className={"row justify-content-center pt-4"}>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 p-0"}>
-                    <Image src="/images/elevacion.jpg" alt="Elevacion" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
+                    <img src="/images/elevacion.jpg" alt="Elevacion" width={1280} height={720} style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
                 </div>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 bg-jaim-primary p-4"}>
                     <h3 className={"text-white"}>Elevación de la cola de la ceja</h3>

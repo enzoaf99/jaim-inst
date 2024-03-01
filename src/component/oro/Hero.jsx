@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useEffect, useState } from 'react';
 
 const CounterAnimation = ({ endValue }) => {
@@ -34,8 +33,8 @@ export default function Hero() {
             <div className={"container text-center pt-5"}>
                 <div className={"row align-items-center justify-content-center"}>
                     <div className={"col-12"}>
-                        <Image src={"/images/icon.png"} alt={"Instituto Jaim"} width="500" height="500"
-                               style={{width: '110px', height: '110px'}}></Image>
+                        <img src={"/images/icon.png"} alt={"Instituto Jaim"} width="500" height="500"
+                               style={{width: '110px', height: '110px'}}></img>
                     </div>
                     <div className={"col-8"}>
                         <p className={"text-white fw-bold pt-4"}>@instituto_jaim</p>
@@ -46,19 +45,19 @@ export default function Hero() {
                     <div className={"col-8"}>
                         <div className={"row align-items-center justify-content-center"}>
                             <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a
-                                href={"https://www.instagram.com/instituto_jaim/"}><Image
+                                href={"https://www.instagram.com/instituto_jaim/"}><img
                                 src={"/images/Instagram.png"} alt={"Instagram"} width={40} height={40}/></a></div>
 
                             <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a
-                                href={"https://www.instagram.com/instituto_jaim/"}><Image
+                                href={"https://www.instagram.com/instituto_jaim/"}><img
                                 src={"/images/Web.png"} alt={"Web"} width={40} height={40}/></a></div>
 
                             <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a
-                                href={"https://www.instagram.com/instituto_jaim/"}><Image
+                                href={"https://www.instagram.com/instituto_jaim/"}><img
                                 src={"/images/face.png"} alt={"Facebook"} width={40} height={40}/></a></div>
 
                             <div className={"col-3 col-md-2 col-lg-1 col-xxl-1"}><a
-                                href={"https://www.instagram.com/instituto_jaim/"}><Image
+                                href={"https://www.instagram.com/instituto_jaim/"}><img
                                 src={"/images/wpp.png"} alt={"Whatsapp"} width={40} height={40}/></a></div>
                         </div>
                     </div>
@@ -72,7 +71,7 @@ export default function Hero() {
                     <div className={"col-10 col-md-7 col-lg-5 col-xl-5 col-xxl-5 pt-5 text-white"}>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
                             <div className={"col-2"}>
-                                <Image className={"icon-contact"} src={"/images/contact.jpg"} alt={"Reserva"}
+                                <img className={"icon-contact"} src={"/images/contact.jpg"} alt={"Reserva"}
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
@@ -82,7 +81,7 @@ export default function Hero() {
                         </div>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
                             <div className={"col-2"}>
-                                <Image className={"icon-contact"} src={"/images/ebook.jpg"} alt={"Ebook"}
+                                <img className={"icon-contact"} src={"/images/ebook.jpg"} alt={"Ebook"}
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
@@ -92,7 +91,7 @@ export default function Hero() {
                         </div>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
                             <div className={"col-2"}>
-                                <Image className={"icon-contact"} src={"/images/tec.jpg"} alt={"Tecnología"}
+                                <img className={"icon-contact"} src={"/images/tec.jpg"} alt={"Tecnología"}
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>
@@ -102,7 +101,7 @@ export default function Hero() {
                         </div>
                         <div className={"row justify-content-center align-items-center contact-row mb-3"}>
                             <div className={"col-2"}>
-                                <Image className={"icon-contact"} src={"/images/act.jpg"} alt={"Actualizaciones"}
+                                <img className={"icon-contact"} src={"/images/act.jpg"} alt={"Actualizaciones"}
                                        width={50} height={50}/>
                             </div>
                             <div className={"col-10"}>

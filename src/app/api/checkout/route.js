@@ -3,6 +3,7 @@ import {NextResponse} from "next/server";
 
 const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID
 const secretId = process.env.PAYPAL_CLIENT_SECRET
+const priceCourse = process.env.NEXT_PUBLIC_PRICE_COURSE
 
 const enviroment = new paypal.core.SandboxEnvironment(clientId, secretId)
 const client = new paypal.core.PayPalHttpClient(enviroment)
@@ -15,11 +16,11 @@ export async function POST() {
             {
                 amount: {
                     currency_code: "USD",
-                    value: "45.00",
+                    value: priceCourse,
                     breakdown: {
                         item_total: {
                             currency_code: "USD",
-                            value: "45.00"
+                            value: priceCourse
                         }
                     }
                 },
@@ -30,7 +31,7 @@ export async function POST() {
                         quantity: "1",
                         unit_amount: {
                             currency_code: "USD",
-                            value: "45.00",
+                            value: priceCourse,
                         }
                     }
                 ]

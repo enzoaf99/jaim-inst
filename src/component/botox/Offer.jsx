@@ -1,5 +1,4 @@
 import {useEffect} from "react";
-import Image from "next/image";
 
 function Offer() {
     useEffect(() => {
@@ -47,7 +46,7 @@ function Offer() {
 
             <div className={"row justify-content-center pb-1 m-0"}>
                 <div className={"col-md-7 col-xl-4 col-xxl-3 p-0"}>
-                    <Image src="/images/service3.jpg" alt="Servicio" width={1280} height={720}
+                    <img src="/images/service3.jpg" alt="Servicio" width={1280} height={720}
                            style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
                 </div>
                 <div id={"offer"} className={"col-md-7 col-xl-4 col-xxl-3 bg-jaim-primary p-4 text-center text-white"}>

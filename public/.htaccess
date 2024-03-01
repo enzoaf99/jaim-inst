@@ -2,6 +2,9 @@
 
     RewriteEngine On
 
+    # API checkout
+    RewriteRule ^api/checkout$ /api/checkout/route.js [L]
+
     # FILES
     RewriteRule ^([^/]+)/$ $1.html
     RewriteCond %{REQUEST_FILENAME} !-f

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 function Who() {
     return (
         <>
@@ -17,7 +15,7 @@ function Who() {
                     <div className={"col-md-6 col-xl-4 col-xxl-4 pb-2"}>
                         <div
                             className={"container text-white text-center pt-2 ps-5 pe-5 pb-2 bg-jaim-primary-gradient rounded-2 card-who"}>
-                            <Image src="/images/injection.png" alt="Inyectable" width={90} height={90}/>
+                            <img src="/images/injection.png" alt="Inyectable" width={90} height={90}/>
                             <h3 className={"pt-3"}>
                                 INYECTABLE
                             </h3>
@@ -30,7 +28,7 @@ function Who() {
                     <div className={"col-md-6 col-xl-4 col-xxl-4 pb-2"}>
                         <div
                             className={"container text-white text-center pt-2 ps-5 pe-5 pb-2 bg-jaim-primary-gradient rounded-2 card-who"}>
-                            <Image src="/images/dermapen.png" alt="Dermapen" width={90} height={90}/>
+                            <img src="/images/dermapen.png" alt="Dermapen" width={90} height={90}/>
                             <h3 className={"pt-3"}>
                                 DERMAPEN
                             </h3>
