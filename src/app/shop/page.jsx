@@ -231,7 +231,7 @@ export default function Shop() {
                             <PayPalButtons
                                 style={{color: "blue"}}
                                 createOrder={async () => {
-                                    const res = await fetch("/api/checkout", {
+                                    const res = await fetch("https://jaimback-production.up.railway.app/api/checkout", {
                                         method: "POST",
                                     });
                                     const order = await res.json();
