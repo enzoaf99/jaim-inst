@@ -214,7 +214,7 @@ export default function Shop() {
                             </tr>
                             <tr>
                                 <td>Descuento promo</td>
-                                <td className={"text-success"}>-64%</td>
+                                <td className={"text-success"}>-45%</td>
                             </tr>
                             </tbody>
                         </table>
@@ -230,9 +230,8 @@ export default function Shop() {
                         <PayPalScriptProvider options={{clientId: paypalclientid}}>
                             <PayPalButtons
                                 style={{color: "blue"}}
-                                //https://jaimback-production.up.railway.app/api/checkout
                                 createOrder={async () => {
-                                    const res = await fetch("http://localhost:3001/api/checkout", {
+                                    const res = await fetch("https://jaimback-production.up.railway.app/api/checkout", {
                                         method: "POST",
                                     });
                                     const order = await res.json();
